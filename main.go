@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/faustfu/cqlc/generator"
 	"github.com/jessevdk/go-flags"
-	"github.com/relops/cqlc/generator"
 	"log"
 	"os"
 )

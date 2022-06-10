@@ -2,8 +2,8 @@ package integration
 
 import (
 	"fmt"
+	"github.com/faustfu/cqlc/cqlc"
 	"github.com/gocql/gocql"
-	"github.com/relops/cqlc/cqlc"
 	"log"
 	"os"
 	"time"
