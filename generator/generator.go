@@ -126,7 +126,7 @@ func generateBinding(opts *Options, version string, w io.Writer) error {
 
 	if proto > 3 {
 		s.Close()
-		cluster.ProtoVersion = proto
+		cluster.ProtoVersion = 4 // TODO: Wait for gocql version for Cassandra 4.
 		s, err = cluster.CreateSession()
 
 		if err != nil {
