@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"github.com/gocql/gocql"
-	"go/format"
 	"io"
 	"io/ioutil"
 	"os"
@@ -161,12 +160,15 @@ func generateBinding(opts *Options, version string, w io.Writer) error {
 		return err
 	}
 
-	bfmt, err := format.Source(b.Bytes())
-	if err != nil {
-		return err
-	}
-
-	if _, err := w.Write(bfmt); err != nil {
+	//bfmt, err := format.Source(b.Bytes())
+	//if err != nil {
+	//	return err
+	//}
+	//
+	//if _, err := w.Write(bfmt); err != nil {
+	//	return err
+	//}
+	if _, err := w.Write(b.Bytes()); err != nil {
 		return err
 	}
 
